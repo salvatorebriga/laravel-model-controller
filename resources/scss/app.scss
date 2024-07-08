@@ -4,3 +4,51 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background-color: rgb(29, 27, 27);
+    color: white;
+    text-align: center;
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: red;
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .col {
+                margin: 10px;
+                width: calc(100% / 4 - 20px);
+
+                @media screen and (max-width: 960px) {
+                    width: calc(100% / 3 - 20px);
+                }
+
+                @media screen and (max-width: 620px) {
+                    width: calc(100% / 2 - 20px);
+                }
+
+                @media screen and (max-width: 380px) {
+                    width: calc(100% - 20px);
+                }
+
+                .card {
+                    padding: 30px 10px;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
